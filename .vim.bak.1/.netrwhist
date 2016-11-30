@@ -1,0 +1,9 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =7
+let g:netrw_dirhist_1='/Users/dharness/Desktop/mean_seed'
+let g:netrw_dirhist_2='/Users/dharness/workspace/stb-teststeps/stb-teststeps/routes/systemtestbed/steps/sma2'
+let g:netrw_dirhist_3='/Users/dharness/workspace/sma-application'
+let g:netrw_dirhist_4='/Users/dharness/workspace/sma-application/public'
+let g:netrw_dirhist_5='/Users/dharness/workspace/sma-application/public/app'
+let g:netrw_dirhist_6='/Users/dharness/workspace/sma-application/public/app/views'
+let g:netrw_dirhist_7='/Users/dharness/dev/babelot-server/app/node_modules/node-inspector/node_modules'
