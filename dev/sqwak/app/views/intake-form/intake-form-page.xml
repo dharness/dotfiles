@@ -1,0 +1,16 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
+  <StackLayout class="intake-form">
+    <Image src="~/images/sqwak-labs-logo.png" stretch="none" class="sqwak-labs-logo" />
+    <Border borderWidth="1" borderColor="none none #3F4F66 none" class="intake-form-label test-subject-id">
+      <Label text="{{ testSubjectId }}" />
+    </Border>
+    <StackLayout class="gender-input">
+      <Label text="gender" class="intake-form-label" />
+      <FlexboxLayout flexDirection="row" justifyContent="space-between" class="radio-buttons">
+        <Button class="{{ 'radio-buttons__button' + (gender == 'M' ? ' selected' : '') }}" text="M" tap="{{ selectGender }}"></Button>
+        <Button class="{{ 'radio-buttons__button' + (gender == 'F' ? ' selected' : '') }}" text="F" tap="{{ selectGender }}" ></Button>
+        <Button class="{{ 'radio-buttons__button' + (gender == 'O' ? ' selected' : '') }}" text="O" tap="{{ selectGender }}"></Button>
+      </FlexboxLayout>
+    </StackLayout>
+  </StackLayout>
+</Page>
