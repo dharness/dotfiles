@@ -35,6 +35,7 @@ Plugin 'tpope/vim-commentary'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'matze/vim-move'
 Plugin 'vim-airline/vim-airline'
+Plugin 'leafgarland/typescript-vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -113,3 +114,5 @@ syntax match commonOperator "\(+\|=\|-\|\^\|\*\)"
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
 set laststatus=2
 au BufRead,BufNewFile *.js set filetype=javascript.jsx
+autocmd BufNewFile,BufRead *.ts setlocal filetype=typescript
+let g:ctrlp_working_path_mode = 0
