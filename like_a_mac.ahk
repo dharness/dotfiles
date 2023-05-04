@@ -1,4 +1,4 @@
-#IfWinNotActive Blender ahk_class GHOST_WindowClass
+#IfWinActive, ahk_exe Code.exe
 {
 
 
