@@ -1,4 +1,4 @@
-#IfWinActive, ahk_exe Code.exe
+#If WinActive("ahk_exe Code.exe") or WinActive("ahk_exe chrome.exe") or WinActive("ahk_exe simplenote.exe") or WinActive("ahk_exe notion.exe")
 {
 
 
@@ -119,20 +119,53 @@ return
 Send, ^/
 return
 
-!Right::
-Send, {End}
+; Map cmd and opt + left/right to move the cursor to the end of the line
+; We do both cmd and opt because windows has this stupid snapping thing mapped to opt I want to override
+
+LWin & Left::
+if GetKeyState("Shift", "P") ; Check if Shift is being held
+    Send +^{Left}           ; Send Shift + Ctrl + Left (select word to the left)
+else
+    Send ^{Left}            ; Send Ctrl + Left (move one word to the left)
+return
+
+LWin & Right::
+if GetKeyState("Shift", "P") ; Check if Shift is being held
+    Send +^{Right}          ; Send Shift + Ctrl + Right (select word to the right)
+else
+    Send ^{Right}           ; Send Ctrl + Right (move one word to the right)
 return
 
 !Left::
 Send, {Home}
 return
 
-+!Right::
-Send, +{End}
+#Left::
+Send, {Home}
+return
+
++#Left::
+Send, +{Home}
 return
 
 +!Left::
 Send, +{Home}
+return
+
++!Right::
+Send, +{End}
+return
+
+!Right::
+Send, {End}
+return
+
++#Right::
+Send, +{End}
+return
+
+#Right::
+Send, {End}
 return
 
 !Up::
